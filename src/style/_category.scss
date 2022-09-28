@@ -1,0 +1,44 @@
+.category {
+  &__item {
+    margin-bottom: 10px;
+  }
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+  &__btn {
+    font-weight: 300;
+    padding-left: 30px;
+    background-position: left;
+    background-size: 18px;
+    background-repeat: no-repeat;
+    text-align: left;
+
+    &_electrician {
+      background-image: url('img/electrician.svg');
+    }
+    &_handyman {
+      background-image: url('img/handyman.svg');
+    }
+    &_kosmetologist {
+      background-image: url('img/kosmetologist.svg');
+    }
+    &_makeup {
+      background-image: url('img/makeup.svg');
+    }
+    &_manicurist {
+      background-image: url('img/manicurist.svg');
+    }
+    &_masseur {
+      background-image: url('img/masseur.svg');
+    }
+    &_photographer {
+      background-image: url('img/photographer.svg');
+    }
+    &_plumber {
+      background-image: url('img/plumber.svg');
+    }
+  }
+}

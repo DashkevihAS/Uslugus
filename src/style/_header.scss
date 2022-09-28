@@ -1,0 +1,31 @@
+.header {
+  padding: 25px 0;
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+  &__auth {
+    display: flex;
+    gap: 40px;
+  }
+
+  &__logo {
+    margin-right: 88px;
+  }
+  &__search {
+    margin-right: auto;
+  }
+
+  &__auth-btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: color 0.2s ease-in-out;
+    &:hover {
+      color: #e5c207;
+    }
+    &:actove {
+      color: #ffd600;
+    }
+  }
+}
