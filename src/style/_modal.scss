@@ -1,10 +1,56 @@
 .modal {
   display: none;
+  position: fixed;
+  inset: 0;
+  padding: 40px;
+  overflow-y: auto;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.6);
+  &_person {
+    display: flex;
+  }
+  // &_sign-up {
+  //   display: flex;
+  // }
+  // &_sign-in {
+  //   display: flex;
+  // }
   &__body {
+    position: relative;
+    cursor: default;
+    margin: auto;
+    max-width: 768px;
+    width: 100%;
+    background-color: #f2f5fc;
+    border-radius: 12px;
+    padding: 24px 20px 48px;
   }
   &__close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    transform: translate(50%, -50%);
+    background-color: #fff;
+    border-radius: 50%;
+    color: #7b7b7b;
+    transition: color 0.2s ease-in-out;
+    &:hover {
+      color: black;
+    }
   }
   &__title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  &__container {
+    max-width: 632px;
+    margin: 0 auto;
   }
 }
 .modal_service {

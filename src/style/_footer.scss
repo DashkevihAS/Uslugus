@@ -6,11 +6,11 @@
     grid-template-areas:
       'logo .'
       'copyright contact';
-    grid-template-columns: 1fr 180px;
   }
   &__contact {
     grid-area: contact;
     align-self: end;
+    justify-self: end;
 
     p:first-child {
       margin-bottom: 7px;
