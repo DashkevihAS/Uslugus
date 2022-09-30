@@ -105,10 +105,15 @@
 
   &__textarea {
   }
-}
-.form_add-review {
-}
-.form_sign-in {
-}
-.form_sign-up {
+  &__wrapper-add-review {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  &__wrapper-rating {
+    display: flex;
+    gap: 24px;
+    margin-top: 32px;
+    justify-content: flex-end;
+  }
 }
