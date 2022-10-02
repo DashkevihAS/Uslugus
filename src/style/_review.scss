@@ -54,14 +54,6 @@
     font-size: 14px;
     color: $text;
 
-    &:after {
-      content: '';
-      position: absolute;
-      display: block;
-      height: 1px;
-      width: 100%;
-      background-color: $text;
-      bottom: 2px;
-    }
+    @include bottomLine(0px, -1px);
   }
 }

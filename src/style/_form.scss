@@ -29,8 +29,12 @@
     padding: 10px 14px;
     font-weight: 300;
     color: $text;
+    outline: 0;
     &::placeholder {
       color: #c0c0c0;
+    }
+    &:focus {
+      border: 1px solid #000;
     }
   }
   &__select {
@@ -49,16 +53,7 @@
     display: flex;
     gap: 5px;
   }
-  &__textarea {
-    width: 100%;
-    min-height: 80px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    border: none;
-    padding: 10px 14px;
-    font-weight: 300;
-    color: $text;
-  }
+
   &__password {
     position: relative;
   }
@@ -82,14 +77,6 @@
     justify-content: space-between;
   }
 
-  &__avatar {
-  }
-
-  &__option {
-  }
-  &__password-eye {
-  }
-
   &__submit {
     display: block;
     padding: 10px 20px;
@@ -104,6 +91,48 @@
   }
 
   &__textarea {
+    width: 100%;
+    min-height: 80px;
+    // background-color: #ffffff;
+    border-radius: 8px;
+    border: none;
+    padding: 10px 14px;
+    font-weight: 300;
+    color: $text;
+    outline: 0;
+    resize: vertical;
+  }
+  &__simple {
+    position: relative;
+    display: block;
+    line-height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 13px;
+      height: 13px;
+      right: -3px;
+      bottom: -3px;
+      background-color: #fff;
+      border-radius: 8px;
+      pointer-events: none;
+    }
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 13px;
+      height: 13px;
+      right: 0px;
+      bottom: 0px;
+      transform: rotate(-45deg);
+      background-image: url('img/simple.svg');
+      pointer-events: none;
+    }
   }
   &__wrapper-add-review {
     display: flex;

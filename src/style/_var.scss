@@ -1,2 +1,15 @@
 $back: #f2f5fc;
 $text: #000;
+
+@mixin bottomLine($out: 0px, $pos: 0px) {
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 1px;
+    width: calc(100% + $out + $out);
+    background-color: $text;
+    bottom: -$pos;
+    left: -#{$out};
+  }
+}
