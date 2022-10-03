@@ -1,16 +1,32 @@
 .footer {
   padding: 55px 0;
+  @include tablet {
+    padding-bottom: 30px;
+  }
+  @include mobile {
+    padding-bottom: 14px;
+  }
   &__container {
-    height: 90px;
     display: grid;
+    gap: 14px;
     grid-template-areas:
       'logo .'
       'copyright contact';
+    @include mobile {
+      grid-template-areas:
+        'logo'
+        'contact'
+        'copyright';
+      gap: 0;
+    }
   }
   &__contact {
     grid-area: contact;
-    align-self: end;
     justify-self: end;
+    @include mobile {
+      justify-self: start;
+      margin-bottom: 33px;
+    }
 
     p:first-child {
       margin-bottom: 7px;
@@ -22,5 +38,8 @@
   }
   &__logo {
     grid-area: logo;
+    @include mobile {
+      padding-bottom: 44px;
+    }
   }
 }

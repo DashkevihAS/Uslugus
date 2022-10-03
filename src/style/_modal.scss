@@ -6,12 +6,19 @@
   overflow-y: auto;
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.6);
-  &_person {
-    display: flex;
+
+  @include tablet {
+    padding: 20px;
   }
-  // &_sign-up {
+  @include mini {
+    padding: 0;
+  }
+  // &_person {
   //   display: flex;
   // }
+  &_sign-up {
+    display: flex;
+  }
   // &_sign-in {
   //   display: flex;
   // }
@@ -39,14 +46,22 @@
     border-radius: 50%;
     color: #7b7b7b;
     transition: color 0.2s ease-in-out;
+    z-index: 10;
     &:hover {
       color: black;
+    }
+    @include mini {
+      transform: none;
+      box-shadow: 0 0 10px 10px #ccc;
     }
   }
   &__title {
     font-size: 24px;
     text-align: center;
     margin-bottom: 24px;
+    @include mobile {
+      font-size: 18px;
+    }
   }
   &__container {
     max-width: 632px;

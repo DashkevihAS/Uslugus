@@ -6,7 +6,13 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 24px;
+    width: 180px;
+  }
+  &__list {
+    padding-top: 24px;
+    @include tablet {
+      display: none;
+    }
   }
   &__btn {
     font-weight: 300;

@@ -21,7 +21,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
     filename: '[name].[contenthash].js',
-    assetModuleFilename: 'assets/[name][ext]'
+    assetModuleFilename: 'assets/[name][ext]',
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -50,6 +50,7 @@ module.exports = {
               },
             },
           },
+          'group-css-media-queries-loader',
           'sass-loader',
         ],
       },
@@ -57,8 +58,8 @@ module.exports = {
         test: /\.woff2?$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'fonts/[name][ext]'
-        }
+          filename: 'fonts/[name][ext]',
+        },
       },
       {
         test: /\.(jpe?g|png|webp|gif|svg)$/i,
@@ -73,17 +74,17 @@ module.exports = {
                 enabled: false,
               },
               pngquant: {
-                quality: [0.65, 0.90],
-                speed: 4
+                quality: [0.65, 0.9],
+                speed: 4,
               },
               gifsicle: {
                 interlaced: false,
               },
               webp: {
-                quality: 75
+                quality: 75,
               },
-            }
-          }
+            },
+          },
         ],
         type: 'asset/resource',
       },

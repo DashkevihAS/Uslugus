@@ -482,18 +482,16 @@
           </div>
 
           <form action="" class="person__form form form_add-review">
-            <fielset class="modal__fieldset">
-              <div class="form__wrapper-add-review">
-                <label for="" class="form__label">
-                  <span class="form__text">Имя</span>
-                  <input type="text" class="form__input" />
-                </label>
+            <fielset class="form__fieldset form__fieldset_add-review">
+              <label for="" class="form__label">
+                <span class="form__text">Имя</span>
+                <input type="text" class="form__input" />
+              </label>
 
-                <label for="" class="form__label">
-                  <span class="form__text">Телефон</span>
-                  <input type="phone" class="form__input" />
-                </label>
-              </div>
+              <label for="" class="form__label">
+                <span class="form__text">Телефон</span>
+                <input type="phone" class="form__input" />
+              </label>
 
               <label for="" class="form__label">
                 <span class="form__text">Комментарий</span>
@@ -503,8 +501,8 @@
               </label>
             </fielset>
 
-            <div class="form__wrapper-rating">
-              <div class="rating">
+            <div class="form__wrapper-send-review">
+              <div class="form__rating rating">
                 <svg
                   class="rating__star"
                   width="18"
@@ -630,7 +628,7 @@
 
           <fieldset class="form__fieldset form__fieldset_service">
             <label for="" class="form__label">
-              <span class="form__text">Категория</span>
+              <span class="form__text form__text_select">Категория</span>
               <select class="form__select">
                 <option class="form__option" value="">
                   Выберите категорию
@@ -657,7 +655,9 @@
             </label>
 
             <div for="" class="form__label">
-              <label class="form__text" for="price">Цена</label>
+              <label class="form__text form__text_select" for="price"
+                >Цена</label
+              >
 
               <div class="form__wrapper-price">
                 <select class="form__select form__select_price">
