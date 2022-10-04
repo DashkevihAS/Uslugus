@@ -1,5 +1,6 @@
 import './index.html';
 import './index.scss';
+import { choicesController } from './modules/choicesController';
 import { modalController } from './modules/modalController';
 import { selectController } from './modules/selectController';
 import { showPassword } from './modules/showPassword';
@@ -53,6 +54,7 @@ const init = () => {
   });
 
   showPassword();
+  choicesController();
 };
 
 init();
