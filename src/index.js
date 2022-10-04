@@ -23,7 +23,23 @@ const init = () => {
       const data = await fetch(
         'https://jsonplaceholder.typicode.com/todos/1',
       ).then((response) => response.json());
-      console.log(data);
+
+      const comments = document.querySelectorAll('.review__text');
+
+      comments.forEach((comment) => {
+        if (comment.scrollHeight > 38) {
+          const button = document.createElement('button');
+          button.classList.add('review__open');
+          button.textContent = 'Развернуть';
+          comment.after(button);
+
+          button.addEventListener('click', () => {
+            comment.classList.toggle('review__text_open');
+            button.textContent =
+              button.textContent === 'Развернуть' ? 'Свернуть' : 'Развернуть';
+          });
+        }
+      });
     },
   });
   selectController({

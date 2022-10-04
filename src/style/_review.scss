@@ -36,10 +36,11 @@
     }
   }
   &__open {
-    margin-left: auto;
+    position: relative;
+    justify-self: start;
     font-size: 14px;
-    text-decoration-line: underline;
     color: $text;
+    @include bottomLine(0px, -2px);
   }
   &__stars {
     justify-self: end;
@@ -63,11 +64,10 @@
     }
   }
   &__show {
-    position: relative;
-    justify-self: left;
+    margin-left: auto;
     font-size: 14px;
     color: $text;
-
+    text-decoration-line: underline;
     @include bottomLine(0px, -2px);
   }
 }
