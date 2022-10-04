@@ -42,8 +42,11 @@
     &:hover {
       color: #e5c207;
     }
-    &:actove {
+    &:active {
       color: #ffd600;
+    }
+    span {
+      font-weight: 300;
     }
   }
   @include mobile {

@@ -2,6 +2,7 @@ import './index.html';
 import './index.scss';
 import { modalController } from './modules/modalController';
 import { selectController } from './modules/selectController';
+import { showPassword } from './modules/showPassword';
 
 const init = () => {
   modalController({
@@ -50,6 +51,8 @@ const init = () => {
       console.log(value);
     },
   });
+
+  showPassword();
 };
 
 init();
