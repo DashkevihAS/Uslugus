@@ -6,6 +6,8 @@
     transition: color 0.2s ease-in-out;
     align-items: center;
     flex-wrap: wrap;
+    width: max-content;
+    margin-bottom: 20px;
 
     &:hover {
       color: #096601;

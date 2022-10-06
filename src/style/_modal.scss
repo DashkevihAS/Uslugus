@@ -24,6 +24,9 @@
     background-color: #f2f5fc;
     border-radius: 12px;
     padding: 24px 20px 48px;
+    @include mini {
+      padding: 24px 10px 32px;
+    }
   }
   &__close {
     display: flex;
