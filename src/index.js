@@ -2,6 +2,7 @@ import './index.html';
 import './index.scss';
 import { avatarController } from './modules/avatarController';
 import { choicesController } from './modules/choicesController';
+import { filterList } from './modules/filterList';
 import { getCategory } from './modules/getCategory';
 import { modalController } from './modules/modalController';
 import { renderList } from './modules/renderList';
@@ -53,7 +54,7 @@ const init = () => {
     openBlock: '.category__list',
     closeBtn: '.category__btn',
     handlerChange: (value) => {
-      console.log(value);
+      filterList(value);
     },
   });
 

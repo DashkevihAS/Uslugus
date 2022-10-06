@@ -18,12 +18,12 @@ export const modalController = ({
     transition: opacity ${time}ms ease-in-out;
   `;
 
-  // const event = {
-  //   handlerOpenModal,
-  //   onOpenModal(handlerOpenModal) {
-  //     event.handlerOpenModal = handlerOpenModal;
-  //   },
-  // };
+  const event = {
+    handlerOpenModal,
+    onOpenModal(handlerOpenModal) {
+      event.handlerOpenModal = handlerOpenModal;
+    },
+  };
 
   const closeModal = (event) => {
     const target = event.target;
