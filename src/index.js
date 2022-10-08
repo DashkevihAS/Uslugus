@@ -5,6 +5,7 @@ import { choicesController } from './modules/choicesController';
 import { filterList } from './modules/filterList';
 import { getCategory } from './modules/getCategory';
 import { modalController } from './modules/modalController';
+import { ratingController } from './modules/ratingController';
 import { renderList } from './modules/renderList';
 import { searchControl } from './modules/searchControl';
 import { selectController } from './modules/selectController';
@@ -68,6 +69,7 @@ const init = () => {
   getCategory();
   renderList();
   searchControl();
+  ratingController();
 };
 
 init();
