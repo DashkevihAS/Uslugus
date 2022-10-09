@@ -13,7 +13,7 @@ export const signInController = (callback) => {
 
     const formData = new FormData(form);
     const data = Object.fromEntries(formData);
-    console.log(data);
+
     const dataResponse = await postData(`${API_URL}/api/service/signin`, data);
     if (dataResponse.errors) {
       console.log(dataResponse); // todo обработка оштибки

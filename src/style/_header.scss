@@ -13,6 +13,9 @@
   &__auth {
     display: flex;
     gap: 40px;
+    &_none {
+      display: none;
+    }
     @include laptop {
       gap: 30px;
     }

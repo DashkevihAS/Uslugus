@@ -12,6 +12,7 @@ import { selectController } from './modules/selectController';
 import { showPassword } from './modules/showPassword';
 import { signInController, signUpController } from './modules/sign';
 import { API_URL } from './modules/const';
+import { createAuth } from './modules/createAuth';
 
 const init = () => {
   const eventModalSignIn = modalController({
@@ -75,6 +76,15 @@ const init = () => {
   ratingController();
   signUpController(eventModalSignUp.closeModal);
   signInController(eventModalSignIn.closeModal);
+
+  localStorage.getItem('name') && createAuth();
+
+  selectController({
+    openBtn: '.auth__img_mobile',
+    openBlock: '.auth',
+    closeBtn: '.auth__img_mobile',
+    display: 'grid',
+  });
 };
 
 init();

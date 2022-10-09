@@ -1,0 +1,75 @@
+.auth {
+  display: grid;
+  grid-template-areas:
+    'img name change'
+    '. category .';
+  grid-template-columns: 24px 1fr max-content;
+  gap: 12px 4px;
+  @include mobile {
+    display: none;
+    position: absolute;
+    right: 50px;
+    top: 20px;
+    padding: 4px 16px 16px;
+    font-size: 16px;
+    width: 183px;
+    height: 137px;
+    background: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    grid-template-areas:
+      'img name '
+      '. category '
+      'change change';
+    grid-template-columns: 24px 1fr;
+    gap: 0 4px;
+  }
+  &__img {
+    display: block;
+    grid-area: img;
+    align-self: center;
+    line-height: 0;
+
+    &_mobile {
+      display: none;
+      @include mobile {
+        display: inline-block;
+        width: 24px;
+        cursor: pointer;
+      }
+    }
+  }
+  &__name {
+    display: block;
+    grid-area: name;
+    align-self: center;
+    justify-self: start;
+    line-height: 0;
+  }
+  &__category {
+    display: block;
+    grid-area: category;
+    font-weight: 300;
+    justify-self: start;
+  }
+  &__change {
+    grid-area: change;
+    margin-left: 5px;
+    position: relative;
+    color: $text;
+    font-weight: 300;
+    @include bottomLine(0px, -4px);
+
+    @include tablet {
+      margin-left: 50px;
+    }
+    @include mobile {
+      margin-left: 0px;
+      justify-self: start;
+      align-self: start;
+      line-height: 0;
+      margin-top: 15px;
+      @include bottomLine(0px, 8px);
+    }
+  }
+}

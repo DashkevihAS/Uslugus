@@ -2,6 +2,7 @@ export const selectController = ({
   openBtn,
   openBlock,
   closeBtn,
+  display = 'block',
   handlerChange = () => {},
 }) => {
   const btn = document.querySelector(openBtn);
@@ -16,7 +17,7 @@ export const selectController = ({
   };
 
   const openSelectBlock = () => {
-    selectBlock.style.display = 'block';
+    selectBlock.style.display = display;
   };
 
   const closeSelectBlock = () => {
@@ -25,7 +26,7 @@ export const selectController = ({
 
   const toggleSelectBlock = () => {
     selectBlock.style.display =
-      selectBlock.style.display === 'block' ? '' : 'block';
+      selectBlock.style.display === display ? '' : display;
   };
 
   btn.addEventListener('click', toggleSelectBlock);
