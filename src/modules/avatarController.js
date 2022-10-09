@@ -5,12 +5,15 @@ export const avatarController = ({ inputFile, uploadResult }) => {
   const avatarBlock = document.querySelector(uploadResult);
   const upload = document.querySelector(inputFile);
 
-  avatarBlock.style.display = 'none';
-
   const crp = new Croppie(avatarBlock, {
     boundary: { width: 300, height: 300 },
     viewport: { width: 200, height: 200, type: 'circle' },
   });
+  crp.hideAvatar = () => {
+    avatarBlock.style.display = 'none';
+  };
+
+  crp.hideAvatar();
 
   const readFile = ({ target: input }) => {
     if (input.files && input.files[0]) {

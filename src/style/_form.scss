@@ -144,7 +144,6 @@
   &__textarea {
     width: 100%;
     min-height: 80px;
-    // background-color: #ffffff;
     border-radius: 8px;
     border: none;
     padding: 10px 14px;
@@ -152,6 +151,10 @@
     color: $text;
     outline: 0;
     resize: vertical;
+    line-height: 1.3;
+    &:focus {
+      border: 1px solid #000;
+    }
   }
   &__simple {
     position: relative;
