@@ -6,7 +6,6 @@ import { store } from './store';
 export const createCard = (obj) => {
   const { avatar, category, comments, direction, id, name, surname, price } =
     obj;
-
   const serviceItem = document.createElement('li');
   serviceItem.classList.add('services__item');
 

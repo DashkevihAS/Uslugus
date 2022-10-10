@@ -13,6 +13,7 @@ import { showPassword } from './modules/showPassword';
 import { signInController, signUpController } from './modules/sign';
 import { API_URL } from './modules/const';
 import { createAuth } from './modules/createAuth';
+import { createPersonService } from './modules/createPersonService';
 
 const init = () => {
   const eventModalSignIn = modalController({
@@ -38,7 +39,7 @@ const init = () => {
       const data = await getData(
         `${API_URL}/api/service/${handler.dataset.id} `,
       );
-      console.log(data);
+      createPersonService(data, modalElem);
 
       const comments = document.querySelectorAll('.review__text');
 
@@ -77,14 +78,16 @@ const init = () => {
   signUpController(eventModalSignUp.closeModal);
   signInController(eventModalSignIn.closeModal);
 
-  localStorage.getItem('name') && createAuth();
+  if (localStorage.getItem('name')) {
+    createAuth();
 
-  selectController({
-    openBtn: '.auth__img_mobile',
-    openBlock: '.auth',
-    closeBtn: '.auth__img_mobile',
-    display: 'grid',
-  });
+    selectController({
+      openBtn: '.auth__img_mobile',
+      openBlock: '.auth',
+      closeBtn: '.auth__img_mobile',
+      display: 'grid',
+    });
+  }
 };
 
 init();

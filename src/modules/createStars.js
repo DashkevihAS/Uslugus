@@ -1,11 +1,15 @@
 import starSVG from '../img/star.png';
 import starOSVG from '../img/star-o.png';
 
-export const createStars = (comments) => {
-  const stars =
+export const createStars = (comments, rating = '') => {
+  let stars =
     Math.round(
       comments.reduce((acc, item) => item.stars + acc, 0) / comments.length,
     ) || 0;
+
+  if (rating) {
+    stars = rating;
+  }
 
   const wrapper = document.createElement('div');
   wrapper.classList.add('service__stars');
