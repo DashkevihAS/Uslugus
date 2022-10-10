@@ -103,7 +103,8 @@
     min-height: 114px;
     display: flex;
     justify-content: space-between;
-    @include mobile {
+    gap: 20px;
+    @media (max-width: 620px) {
       flex-direction: column;
       gap: 32px;
     }
@@ -135,6 +136,9 @@
     }
     &_sign-up {
       align-self: flex-end;
+      &-button {
+        margin-left: auto;
+      }
     }
     &_sign-in {
       margin-left: auto;

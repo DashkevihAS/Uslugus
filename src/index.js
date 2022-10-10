@@ -20,15 +20,22 @@ const init = () => {
     modal: '.modal_sign-in',
     btnOpen: '.header__auth-btn_sign-in',
     btnClose: '.modal__close',
+    handlerCloseModal: () => {
+      const form = document.querySelector('.form_sign-in');
+      form.querySelectorAll('input').forEach((input) => {
+        input.style.border = 'none';
+      });
+      form.querySelector('ul').textContent = '';
+    },
   });
   const eventModalSignUp = modalController({
     modal: '.modal_sign-up',
     btnOpen: '.header__auth-btn_sign-up',
     btnClose: '.modal__close',
-    // handlerCloseModal: () => {
-    //   const form = document.querySelector('.form_sign-up');
-    //   form.reset();
-    // },
+    handlerCloseModal: () => {
+      const form = document.querySelector('.form_sign-up');
+      form.querySelector('ul').textContent = '';
+    },
   });
   modalController({
     modal: '.modal_person',
