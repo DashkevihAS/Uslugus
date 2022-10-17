@@ -4,7 +4,7 @@ import { directions } from './const';
 import { createStars } from './createStars';
 import { createComment } from './createComment';
 
-export const createPersonService = (data, modalElem) => {
+export const renderPerson = (data) => {
   const {
     about,
     avatar,
@@ -18,8 +18,6 @@ export const createPersonService = (data, modalElem) => {
     surname,
     price,
   } = data;
-
-  console.log(data);
 
   const service = document.querySelector('.person__service');
   service.textContent = '';
@@ -81,6 +79,7 @@ export const createPersonService = (data, modalElem) => {
 
   const aboutText = document.querySelector('.about__text');
   aboutText.textContent = `${about}`;
+  aboutText.style.whiteSpace = 'pre-line';
 
   const reviewList = document.querySelector('.review__list');
   reviewList.textContent = '';

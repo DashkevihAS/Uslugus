@@ -43,7 +43,7 @@ export const signInController = (callback) => {
 
 export const signUpController = (callback) => {
   const form = document.querySelector('.form_sign-up');
-
+  form.action = `${API_URL}/api/service/signup`;
   const button = document.querySelector('.form__submit_sign-up-button');
   const parrent = button.parentNode;
   const errorList = document.createElement('ul');
@@ -67,6 +67,17 @@ export const signUpController = (callback) => {
       parrent.insertBefore(errorList, button);
       return;
     }
+    if (form.password[0].value === '') {
+      const error = document.createElement('li');
+      error.textContent = 'Не указан пароль';
+      error.style.paddingBottom = '50px';
+      error.style.color = 'red';
+
+      errorList.append(error);
+      parrent.insertBefore(errorList, button);
+      return;
+    }
+
     const formData = new FormData(form);
     const data = Object.fromEntries(formData);
     data.avatar = await crp.result({
@@ -74,7 +85,12 @@ export const signUpController = (callback) => {
       size: 'viewport',
     });
 
-    const dataResponse = await postData(`${API_URL}/api/service/signup`, data);
+    if (!data.avatar.includes('base64')) {
+      delete data.avatar;
+    }
+
+    const dataResponse = await postData(form.action, data, form.dataset.method);
+    console.log(dataResponse);
     if (dataResponse.errors) {
       const errors = dataResponse.errors.map((errObj) => {
         const error = document.createElement('li');
@@ -86,12 +102,15 @@ export const signUpController = (callback) => {
       });
       errorList.append(...errors);
       parrent.insertBefore(errorList, button);
-
       return;
     }
-    const servicesList = document.querySelector('.services__list');
-    servicesList.append(createCard(dataResponse));
-    store.services.push(dataResponse);
+
+    if (form.dataset.method !== 'PATCH') {
+      const servicesList = document.querySelector('.services__list');
+      servicesList.append(createCard(dataResponse));
+      store.services.push(dataResponse);
+      auth(dataResponse);
+    }
 
     auth(dataResponse);
     form.reset();

@@ -12,8 +12,9 @@ import { selectController } from './modules/selectController';
 import { showPassword } from './modules/showPassword';
 import { signInController, signUpController } from './modules/sign';
 import { API_URL } from './modules/const';
-import { createAuth } from './modules/createAuth';
-import { createPersonService } from './modules/createPersonService';
+import { renderAuth } from './modules/renderAuth';
+import { renderPerson } from './modules/renderPerson';
+import { commentsController } from './modules/commentsController';
 
 const init = () => {
   const eventModalSignIn = modalController({
@@ -25,7 +26,9 @@ const init = () => {
       form.querySelectorAll('input').forEach((input) => {
         input.style.border = 'none';
       });
-      form.querySelector('ul').textContent = '';
+      if (form.querySelector('ul')) {
+        form.querySelector('ul').textContent = '';
+      }
     },
   });
   const eventModalSignUp = modalController({
@@ -34,7 +37,9 @@ const init = () => {
     btnClose: '.modal__close',
     handlerCloseModal: () => {
       const form = document.querySelector('.form_sign-up');
-      form.querySelector('ul').textContent = '';
+      if (form.querySelector('ul')) {
+        form.querySelector('ul').textContent = '';
+      }
     },
   });
   modalController({
@@ -46,24 +51,9 @@ const init = () => {
       const data = await getData(
         `${API_URL}/api/service/${handler.dataset.id} `,
       );
-      createPersonService(data, modalElem);
+      renderPerson(data, modalElem);
 
-      const comments = document.querySelectorAll('.review__text');
-
-      comments.forEach((comment) => {
-        if (comment.scrollHeight > 38) {
-          const button = document.createElement('button');
-          button.classList.add('review__open');
-          button.textContent = 'Развернуть';
-          comment.after(button);
-
-          button.addEventListener('click', () => {
-            comment.classList.toggle('review__text_open');
-            button.textContent =
-              button.textContent === 'Развернуть' ? 'Свернуть' : 'Развернуть';
-          });
-        }
-      });
+      commentsController();
     },
   });
   selectController({
@@ -86,7 +76,7 @@ const init = () => {
   signInController(eventModalSignIn.closeModal);
 
   if (localStorage.getItem('name')) {
-    createAuth();
+    renderAuth();
 
     selectController({
       openBtn: '.auth__img_mobile',
