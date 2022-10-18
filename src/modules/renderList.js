@@ -8,6 +8,7 @@ export const renderList = async (url = `${API_URL}/api/service`) => {
   serviceList.textContent = '';
 
   const data = await getData(url);
+  store.services = data;
   const cards = data.map(createCard);
   serviceList.append(...cards);
 };
