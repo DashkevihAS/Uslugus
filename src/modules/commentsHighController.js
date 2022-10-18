@@ -1,4 +1,4 @@
-export const commentsController = () => {
+export const commentsHighController = () => {
   const comments = document.querySelectorAll('.review__text');
 
   comments.forEach((comment) => {

@@ -2,6 +2,7 @@ import starSVG from '../img/star.png';
 import starOSVG from '../img/star-o.png';
 
 export const createComment = (obj) => {
+  console.log(obj);
   const { name, stars, text } = obj;
   const reviewItem = document.createElement('li');
   reviewItem.classList.add('review__item');

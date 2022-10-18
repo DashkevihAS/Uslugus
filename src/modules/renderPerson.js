@@ -12,7 +12,6 @@ export const renderPerson = (data) => {
     comments,
     direction,
     email,
-    id,
     name,
     phone,
     surname,

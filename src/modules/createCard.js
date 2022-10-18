@@ -24,6 +24,7 @@ export const createCard = (obj) => {
 
   const serviceTitle = document.createElement('h3');
   serviceTitle.classList.add('service__title');
+
   serviceTitle.textContent = store.category.find(
     (item) => item.title === category,
   ).rus;

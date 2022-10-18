@@ -2,10 +2,11 @@ import starSVG from '../img/star.png';
 import starOSVG from '../img/star-o.png';
 
 export const createStars = (comments, rating = '') => {
-  let stars =
-    Math.round(
-      comments.reduce((acc, item) => item.stars + acc, 0) / comments.length,
-    ) || 0;
+  let stars = Array.isArray(comments)
+    ? Math.round(
+        comments.reduce((acc, item) => +item.stars + acc, 0) / comments.length,
+      ) || 0
+    : comments;
 
   if (rating) {
     stars = rating;
