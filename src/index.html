@@ -35,7 +35,7 @@
       <div class="container header__container">
         <img class="header__logo" src="img/logo.svg" alt="логотип Услугус" />
 
-        <form action="" class="header__search search">
+        <form class="header__search search">
           <input type="text" class="search__input" name="search" />
           <button class="search__submit" type="submit">
             <svg
@@ -522,25 +522,25 @@
             <button class="review__show">Все отзывы</button>
           </div>
 
-          <form action="" class="person__form form form_add-review">
-            <fielset class="form__fieldset form__fieldset_add-review">
-              <label for="" class="form__label">
+          <form class="person__form form form_add-review">
+            <div class="form__fieldset form__fieldset_add-review">
+              <label class="form__label">
                 <span class="form__text">Имя</span>
                 <input type="text" class="form__input" name="name" />
               </label>
 
-              <label for="" class="form__label">
+              <label class="form__label">
                 <span class="form__text">Телефон</span>
-                <input type="phone" class="form__input" name="phone" />
+                <input type="number" class="form__input" name="phone" />
               </label>
 
-              <label for="" class="form__label">
+              <label class="form__label">
                 <span class="form__text">Комментарий</span>
                 <span class="form__simple">
                   <textarea class="form__textarea" name="text"></textarea>
                 </span>
               </label>
-            </fielset>
+            </div>
 
             <div class="form__wrapper-send-review">
               <div class="form__rating rating" data-stars="3">
@@ -614,12 +614,7 @@
                     stroke="#FFD600"
                   />
                 </svg>
-                <input
-                  class="rating__input"
-                  type="hidden"
-                  name="stars"
-                  class="rating__input"
-                />
+                <input class="rating__input" type="hidden" name="stars" />
               </div>
               <button class="form__submit">Опубликовать отзыв</button>
             </div>
@@ -669,7 +664,7 @@
 
             <label class="form__label">
               <span class="form__text">Телефон</span>
-              <input type="phone" class="form__input" name="phone" />
+              <input type="number" class="form__input" name="phone" />
             </label>
 
             <label class="form__label">
@@ -679,7 +674,7 @@
           </fieldset>
 
           <fieldset class="form__fieldset form__fieldset_service">
-            <label for="" class="form__label">
+            <label class="form__label">
               <span class="form__text form__text_select">Категория</span>
               <select
                 class="form__select form__select_category"
@@ -709,7 +704,7 @@
               </select>
             </label>
 
-            <div for="" class="form__label">
+            <div class="form__label">
               <label class="form__text form__text_select" for="price"
                 >Цена</label
               >
@@ -733,7 +728,7 @@
               </div>
             </div>
 
-            <label for="" class="form__label">
+            <label class="form__label">
               <span class="form__text">Описание услуг</span>
               <span class="form__simple">
                 <textarea class="form__textarea" name="about"></textarea>
