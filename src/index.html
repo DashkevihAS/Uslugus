@@ -30,118 +30,31 @@
     <title>Услугус - сервис услуг</title>
   </head>
   <body>
-    <header class="header">
-      <h1 class="visually-hidden">Услугус - сервис услуг</h1>
-      <div class="container header__container">
-        <img class="header__logo" src="img/logo.svg" alt="логотип Услугус" />
+    <div class="wrapper">
+      <header class="header">
+        <h1 class="visually-hidden">Услугус - сервис услуг</h1>
+        <div class="container header__container">
+          <img class="header__logo" src="img/logo.svg" alt="логотип Услугус" />
 
-        <form class="header__search search">
-          <input type="text" class="search__input" name="search" />
-          <button class="search__submit" type="submit">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M10.875 18.75C15.2242 18.75 18.75 15.2242 18.75 10.875C18.75 6.52576 15.2242 3 10.875 3C6.52576 3 3 6.52576 3 10.875C3 15.2242 6.52576 18.75 10.875 18.75Z"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M16.4431 16.4438L20.9994 21.0001"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </button>
-        </form>
-
-        <div class="header__auth">
-          <button class="header__auth-btn header__auth-btn_sign-in">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M8.81348 15.9375L12.7499 12L8.81348 8.0625"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M2.25 12H12.7472"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <path
-                d="M12.75 3.75H18C18.1989 3.75 18.3897 3.82902 18.5303 3.96967C18.671 4.11032 18.75 4.30109 18.75 4.5V19.5C18.75 19.6989 18.671 19.8897 18.5303 20.0303C18.3897 20.171 18.1989 20.25 18 20.25H12.75"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <span>Войти</span>
-          </button>
-
-          <button class="header__auth-btn header__auth-btn_sign-up">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M12 15C15.3137 15 18 12.3137 18 9C18 5.68629 15.3137 3 12 3C8.68629 3 6 5.68629 6 9C6 12.3137 8.68629 15 12 15Z"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-miterlimit="10"
-              />
-              <path
-                d="M2.90527 20.2491C3.82736 18.6531 5.15322 17.3278 6.74966 16.4064C8.34611 15.485 10.1569 15 12.0002 15C13.8434 15 15.6542 15.4851 17.2506 16.4065C18.8471 17.3279 20.1729 18.6533 21.0949 20.2493"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <span>Регистрация</span>
-          </button>
-        </div>
-      </div>
-    </header>
-
-    <main>
-      <section class="services">
-        <h2 class="visually-hidden">Список специалистов</h2>
-
-        <div class="container services__container">
-          <div class="services__category category">
-            <button class="category__title">
-              <span>Категории</span>
+          <form class="header__search search">
+            <input type="text" class="search__input" name="search" />
+            <button class="search__submit" type="submit">
               <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M16.25 7.5L10 13.75L3.75 7.5"
+                  d="M10.875 18.75C15.2242 18.75 18.75 15.2242 18.75 10.875C18.75 6.52576 15.2242 3 10.875 3C6.52576 3 3 6.52576 3 10.875C3 15.2242 6.52576 18.75 10.875 18.75Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M16.4431 16.4438L20.9994 21.0001"
                   stroke="currentColor"
                   stroke-width="2"
                   stroke-linecap="round"
@@ -149,223 +62,186 @@
                 />
               </svg>
             </button>
-            <ul class="category__list">
-              <li class="category__item">
-                <button
-                  class="category__btn category__btn_photographer"
-                  data-value="photographer"
+          </form>
+
+          <div class="header__auth">
+            <button class="header__auth-btn header__auth-btn_sign-in">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.81348 15.9375L12.7499 12L8.81348 8.0625"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M2.25 12H12.7472"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12.75 3.75H18C18.1989 3.75 18.3897 3.82902 18.5303 3.96967C18.671 4.11032 18.75 4.30109 18.75 4.5V19.5C18.75 19.6989 18.671 19.8897 18.5303 20.0303C18.3897 20.171 18.1989 20.25 18 20.25H12.75"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span>Войти</span>
+            </button>
+
+            <button class="header__auth-btn header__auth-btn_sign-up">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 15C15.3137 15 18 12.3137 18 9C18 5.68629 15.3137 3 12 3C8.68629 3 6 5.68629 6 9C6 12.3137 8.68629 15 12 15Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                />
+                <path
+                  d="M2.90527 20.2491C3.82736 18.6531 5.15322 17.3278 6.74966 16.4064C8.34611 15.485 10.1569 15 12.0002 15C13.8434 15 15.6542 15.4851 17.2506 16.4065C18.8471 17.3279 20.1729 18.6533 21.0949 20.2493"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span>Регистрация</span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="services">
+          <h2 class="visually-hidden">Список специалистов</h2>
+
+          <div class="container services__container">
+            <div class="services__category category">
+              <button class="category__title">
+                <span>Категории</span>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  Фотограф
-                </button>
-              </li>
-              <li class="category__item">
-                <button
-                  class="category__btn category__btn_makeup"
-                  data-value="makeup"
-                >
-                  Визажист
-                </button>
-              </li>
-              <li class="category__item">
-                <button
-                  class="category__btn category__btn_masseur"
-                  data-value="masseur"
-                >
-                  Массажист
-                </button>
-              </li>
-              <li class="category__item">
-                <button
-                  class="category__btn category__btn_handyman"
-                  data-value="handyman"
-                >
-                  Муж на час
-                </button>
-              </li>
-              <li class="category__item">
-                <button
-                  class="category__btn category__btn_kosmetologist"
-                  data-value="cosmetologist"
-                >
-                  Косметолог
-                </button>
-              </li>
-              <li class="category__item">
-                <button
-                  class="category__btn category__btn_electrician"
-                  data-value="electrician"
-                >
-                  Электрик
-                </button>
-              </li>
-              <li class="category__item">
-                <button
-                  class="category__btn category__btn_manicurist"
-                  data-value="manicurist"
-                >
-                  Мастер маникюра
-                </button>
-              </li>
-              <li class="category__item">
-                <button
-                  class="category__btn category__btn_plumber"
-                  data-value="plumber"
-                >
-                  Сантехник
-                </button>
-              </li>
+                  <path
+                    d="M16.25 7.5L10 13.75L3.75 7.5"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <ul class="category__list">
+                <li class="category__item">
+                  <button
+                    class="category__btn category__btn_photographer"
+                    data-value="photographer"
+                  >
+                    Фотограф
+                  </button>
+                </li>
+                <li class="category__item">
+                  <button
+                    class="category__btn category__btn_makeup"
+                    data-value="makeup"
+                  >
+                    Визажист
+                  </button>
+                </li>
+                <li class="category__item">
+                  <button
+                    class="category__btn category__btn_masseur"
+                    data-value="masseur"
+                  >
+                    Массажист
+                  </button>
+                </li>
+                <li class="category__item">
+                  <button
+                    class="category__btn category__btn_handyman"
+                    data-value="handyman"
+                  >
+                    Муж на час
+                  </button>
+                </li>
+                <li class="category__item">
+                  <button
+                    class="category__btn category__btn_kosmetologist"
+                    data-value="cosmetologist"
+                  >
+                    Косметолог
+                  </button>
+                </li>
+                <li class="category__item">
+                  <button
+                    class="category__btn category__btn_electrician"
+                    data-value="electrician"
+                  >
+                    Электрик
+                  </button>
+                </li>
+                <li class="category__item">
+                  <button
+                    class="category__btn category__btn_manicurist"
+                    data-value="manicurist"
+                  >
+                    Мастер маникюра
+                  </button>
+                </li>
+                <li class="category__item">
+                  <button
+                    class="category__btn category__btn_plumber"
+                    data-value="plumber"
+                  >
+                    Сантехник
+                  </button>
+                </li>
+              </ul>
+            </div>
+
+            <ul class="services__list">
+              <h2>Данные загружаются, пожалуйста подождите...</h2>
             </ul>
           </div>
+        </section>
+      </main>
 
-          <ul class="services__list">
-            <li class="services__item">
-              <article class="service">
-                <img
-                  class="service__avatar"
-                  src="img/photo.png"
-                  alt="аватар Иван"
-                />
+      <footer class="footer">
+        <div class="footer__container container">
+          <img class="footer__logo" src="img/logo.svg" alt="логотип Услугус" />
 
-                <div class="service__present">
-                  <h3 class="service__title">Фотограф</h3>
-                  <p class="service__name">Иван П.</p>
-                </div>
-
-                <p class="service__price">от 4000 ₽</p>
-
-                <div class="service__review">
-                  <div class="service__stars">
-                    <img
-                      class="service__star"
-                      src="img/star.png"
-                      alt="рейтинг специалиста 4 из 5"
-                    />
-                    <img class="service__star" src="img/star.png" alt="" />
-                    <img class="service__star" src="img/star.png" alt="" />
-                    <img class="service__star" src="img/star.png" alt="" />
-                    <img class="service__star" src="img/star-o.png" alt="" />
-                  </div>
-                  <p class="service__count-review">4</p>
-                </div>
-              </article>
-            </li>
-
-            <li class="services__item">
-              <article class="service">
-                <img
-                  class="service__avatar"
-                  src="img/photo.png"
-                  alt="аватар Иван"
-                />
-
-                <div class="service__present">
-                  <h3 class="service__title">Фотограф</h3>
-                  <p class="service__name">Иван П.</p>
-                </div>
-
-                <p class="service__price">от 4000 ₽</p>
-
-                <div class="service__review">
-                  <div class="service__stars">
-                    <img
-                      class="service__star"
-                      src="img/star.png"
-                      alt="рейтинг специалиста 4 из 5"
-                    />
-                    <img class="service__star" src="img/star.png" alt="" />
-                    <img class="service__star" src="img/star.png" alt="" />
-                    <img class="service__star" src="img/star.png" alt="" />
-                    <img class="service__star" src="img/star-o.png" alt="" />
-                  </div>
-                  <p class="service__count-review">4</p>
-                </div>
-              </article>
-            </li>
-
-            <li class="services__item">
-              <article class="service">
-                <img
-                  class="service__avatar"
-                  src="img/photo.png"
-                  alt="аватар Иван"
-                />
-
-                <div class="service__present">
-                  <h3 class="service__title">Фотограф</h3>
-                  <p class="service__name">Иван П.</p>
-                </div>
-
-                <p class="service__price">от 4000 ₽</p>
-
-                <div class="service__review">
-                  <div class="service__stars">
-                    <img
-                      class="service__star"
-                      src="img/star.png"
-                      alt="рейтинг специалиста 4 из 5"
-                    />
-                    <img class="service__star" src="img/star.png" alt="" />
-                    <img class="service__star" src="img/star.png" alt="" />
-                    <img class="service__star" src="img/star.png" alt="" />
-                    <img class="service__star" src="img/star-o.png" alt="" />
-                  </div>
-                  <p class="service__count-review">4</p>
-                </div>
-              </article>
-            </li>
-
-            <li class="services__item">
-              <article class="service">
-                <img
-                  class="service__avatar"
-                  src="img/photo.png"
-                  alt="аватар Иван"
-                />
-
-                <div class="service__present">
-                  <h3 class="service__title">Фотограф</h3>
-                  <p class="service__name">Иван П.</p>
-                </div>
-
-                <p class="service__price">от 4000 ₽</p>
-
-                <div class="service__review">
-                  <div class="service__stars">
-                    <img
-                      class="service__star"
-                      src="img/star.png"
-                      alt="рейтинг специалиста 4 из 5"
-                    />
-                    <img class="service__star" src="img/star.png" alt="" />
-                    <img class="service__star" src="img/star.png" alt="" />
-                    <img class="service__star" src="img/star.png" alt="" />
-                    <img class="service__star" src="img/star-o.png" alt="" />
-                  </div>
-                  <p class="service__count-review">4</p>
-                </div>
-              </article>
-            </li>
-          </ul>
+          <p class="footer__copyright">© Услугус, 2022</p>
+          <div class="footer__contact">
+            <p>Design by Anastasia Ilina</p>
+            <p>
+              Tg:
+              <a href="https://t.me/Mrshmallowww" target="_blank">
+                @Mrshmallowww
+              </a>
+            </p>
+          </div>
         </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="footer__container container">
-        <img class="footer__logo" src="img/logo.svg" alt="логотип Услугус" />
-
-        <p class="footer__copyright">© Услугус, 2022</p>
-        <div class="footer__contact">
-          <p>Design by Anastasia Ilina</p>
-          <p>
-            Tg:
-            <a href="https://t.me/Mrshmallowww" target="_blank">
-              @Mrshmallowww
-            </a>
-          </p>
-        </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
 
     <div class="modal modal_person">
       <div class="modal__body">
